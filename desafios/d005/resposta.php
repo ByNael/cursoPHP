@@ -12,7 +12,7 @@
         <h1>Analisador de Número Real</h1>
     </header>
     <main>
-        <?php 
+        <?php //faça um programa que receba um número real e imprima a parte inteira e a parte fracionaria na tela
             $real = $_GET ["real"];
             $inteira = intval($real);
             $fracionaria = $real - $inteira;

@@ -12,9 +12,9 @@
         <h1>Resultado do processamento</h1>
     </header>
     <main>
-        <?php 
-            $number = $_GET ["numero"] ?? "sem número";
-            $antecessor = $number - 1;
+        <?php //faça um programa que receba um numero e imprima seu sucessor e seu antecessor
+            $number = $_GET ["numero"] ?? 0; 
+            $antecessor = $number - 1; 
             $sucessor = $number + 1;
             
             echo "<p>O número escolhido foi <strong>$number</strong></p>";
@@ -22,7 +22,7 @@
             echo "<p>Seu sucessor é: <strong>$sucessor</strong></p>";
         ?>
 
-        <p><a href="javascript:history.go(-1)">Voltar para a página anterior</a></p>
+        <button onclick="javascript:history.go(-1)">&#x2b05; Voltar</button>
     </main>
 </body>
 </html>

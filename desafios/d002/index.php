@@ -12,7 +12,7 @@
         <h1>Trabalhando com números aleatórios</h1>
     </header>
     <main>
-        <?php 
+        <?php //faça um programa que gere aleatoriamente um número entre 0 e 100
             define("INFERIOR", 0);
             define("SUPERIOR", 100);
             $valor = rand(INFERIOR, SUPERIOR);

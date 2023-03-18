@@ -12,8 +12,8 @@
         <h1>Resultado do processamento</h1>
     </header>
     <main>
-        <?php 
-            $reais = $_GET ["reais"];
+        <?php //faça um conversor de real para dolar onde o usuario deve dizer quantos reais tem na carteira
+            $reais = $_GET ["reais"]; 
             $conversor = $reais / 5.22;
 
             echo "Seus <strong>R$ $reais</strong> equivalem a ";
@@ -21,7 +21,7 @@
             echo "<p><strong>Cotação fixa de R$5,22</strong> informada diretamente no codigo</p>";
         ?>
 
-        <p><a href="javascript:history.go(-1)">Voltar</a></p>
+        <button onclick="javascript:history.go(-1)">&#x2b05; Voltar</button>
     </main>
 </body>
 </html>

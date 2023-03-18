@@ -12,16 +12,16 @@
         <h1>Resultado do processamento</h1>
     </header>
     <main>
-        <?php 
+        <?php //faça um conversor de real para dolar (consumindo uma api do banco central do brasil) onde o usuario deve dizer quantos reais tem na carteira
             $reais = $_GET ["reais"];
             $conversor = $reais / 5.22;
 
             echo "Seus <strong>R$ $reais</strong> equivalem a ";
             echo "<strong> US$" . number_format("$conversor",2,",",".") . "</strong>";
-            echo "<p>Cotação obtida diretamente do site do <strong>Banco Central do Brasil</strong></p>";
+            echo "<p>Cotação obtida diretamente do site do <strong>Banco Central do Brasil</strong></p>"; //ainda precisa ser concluido
         ?>
 
-        <p><a href="javascript:history.go(-1)">Voltar</a></p>
+        <button onclick="javascript:history.go(-1)">&#x2b05; Voltar</button>
     </main>
 </body>
 </html>
