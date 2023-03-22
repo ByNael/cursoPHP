@@ -14,7 +14,8 @@
     <main>
         <?php //faça um conversor de real para dolar (consumindo uma api do banco central do brasil) onde o usuario deve dizer quantos reais tem na carteira
             $reais = $_GET ["reais"];
-            $conversor = $reais / 5.22;
+            
+            //$conversor = $reais / 5.22;
 
             echo "Seus <strong>R$ $reais</strong> equivalem a ";
             echo "<strong> US$" . number_format("$conversor",2,",",".") . "</strong>";
