@@ -1,0 +1,1 @@
+calculadora de tempo que recebe em segundos pelo usuario e imprime na tela quantas semanas, dias, horas, minutos e segundos

@@ -30,7 +30,7 @@
         <?php 
             $soma = $valor1 + $valor2;
 
-            print "O resultado da soma dos dois valores $valor1 e $valor2 é: $soma";
+            print "O resultado da soma dos dois valores $valor1 e $valor2 é: <strong>$soma</strong>";
         ?>
     </section>
 </body>
