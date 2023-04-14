@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Desafio Raiz</title>
+    <title>Desafio Reajuste</title>
 </head>
 <body>
     <?php
@@ -19,7 +19,7 @@
             <input type="number" name="preco" id="preco" value="<?=$preco?>">
             <label for="percentual">Qual o percentual de reajuste?</label>
             <input type="number" name="percentual" id="percentual" value="<?=$percentual?>"> 
-            <input type="submit" value="Qual será a minha idade?">
+            <input type="submit" value="Reajustar">
         </form>
     </main>
 
