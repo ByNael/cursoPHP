@@ -27,8 +27,8 @@
             $cubica = pow($numero,(1/3));
 
             echo "Analisando o <strong>número $numero</strong>, temos<br>";
-            echo "A sua raiz quadrada é <strong>" . number_format($quadrada, 2, ",", ".") ."</strong><br>";
-            echo "A sua raiz cúbica é <strong>" . number_format($cubica, 2, ",", ".") ."</strong>";
+            echo "A sua raiz quadrada é <strong>" . number_format($quadrada, 3, ",", ".") ."</strong><br>";
+            echo "A sua raiz cúbica é <strong>" . number_format($cubica, 3, ",", ".") ."</strong>";
         ?>
     </section>
 </body>
