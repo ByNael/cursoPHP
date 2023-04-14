@@ -25,7 +25,7 @@
             <input type="number" name="valor2" id="valor2" value="<?=$valor2?>">
             <label for="valor2">2° Peso</label>
             <input type="number" name="peso2" id="peso2" value="<?=$peso2?>">
-            <input type="submit" value="Calcular raizes">
+            <input type="submit" value="Calcular Médias">
         </form>
     </main>
 
