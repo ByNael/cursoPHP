@@ -33,7 +33,7 @@
             echo "$semanas semanas <br>";
             echo "$dias dias <br>";
             echo "$horas horas <br>";
-            echo "$segundos segundos<br>";
+            echo "$segundos segundos<br>"; //estrutura de if else que vou fazer depois (preguiça no momento)
         ?>
     </section>
 </body>

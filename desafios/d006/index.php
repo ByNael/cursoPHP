@@ -11,7 +11,7 @@
     <?php
         //arquivo que recebe dividendo e divisor e imprime na tela o dividendo, divisor, resultado e o resto. 
         $dividendo = $_GET['dividendo'] ?? 0;
-        $divisor = $_GET['divisor'] ?? 0;
+        $divisor = $_GET['divisor'] ?? 1;
     ?>
     <main>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
@@ -26,14 +26,20 @@
     <section id="resultado">
         <h2>Estrutura da divisão</h2>
         <?php 
-            $divisao = $dividendo / $divisor;
+            $quociente = intdiv($dividendo, $divisor);
             $resto = $dividendo % $divisor;
-
-            echo "Este é o valor do dividendo $dividendo<br>";
-            echo "Este é o valor do divisor $divisor<br>";
-            echo "O coeficiente da divisão é $divisao<br>";
-            echo "O 'resto' da divisão é $resto<br>"; //ainda vai ter uma correção para deixar mais visual
         ?>
+
+        <table class="divisao">
+            <tr>
+                <td><?=$dividendo?></td>
+                <td><?=$divisor?></td>
+            </tr>
+            <tr>
+                <td><?=$resto?></td>
+                <td><?=$quoeficiente?></td>
+            </tr>
+        </table>
     </section>
 </body>
 </html>
