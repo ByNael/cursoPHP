@@ -24,16 +24,16 @@
     <section id="resultado">
         <h2>Saque de <?=number_format($valor, 2, ",", ".")?> realizado</h2>
         <?php 
-            $cem = (integer) $valor/100;
-            $dias = (integer) $valor/50;
-            $horas = (integer) $valor/10;
-            $minutos = (integer) $valor/5;
+            $cem =  intdiv($valor,100);
+            $cinquenta = intdiv(($valor-(100*$cem)),50);
+            $dez = intdiv((($valor-(100*$cem))-(50*$cinquenta)),10);
+            $cinco = intdiv(((($valor-(100*$cem))-(50*$cinquenta))-(10*$dez)),5);
 
             echo "o caixa eletrônico vai te entregar as seguintes notas:<br>";
-            echo "$semanas semanas <br>";
-            echo "$dias dias <br>";
-            echo "$horas horas <br>";
-            echo "$segundos segundos<br>"; //estrutura de if else que vou fazer depois (preguiça no momento)
+            echo "$cem cem <br>";
+            echo "$cinquenta cinquenta <br>";
+            echo "$dez dez <br>";
+            echo "$cinco cinco<br>"; //resolvi sem if else :P deu o maior trombolho que ja vi
         ?>
     </section>
 </body>
