@@ -23,12 +23,16 @@
     <section id="resultado">
         <h2>Resultado final</h2>
         <?php 
+            /* Solução com pow
             $quadrada = pow($numero,(1/2));
             $cubica = pow($numero,(1/3));
+            */
+            $quadrada = $numero ** 1/2;
+            $cubica = $numero ** 1/3;
 
             echo "Analisando o <strong>número $numero</strong>, temos<br>";
-            echo "A sua raiz quadrada é <strong>" . number_format($quadrada, 3, ",", ".") ."</strong><br>";
-            echo "A sua raiz cúbica é <strong>" . number_format($cubica, 3, ",", ".") ."</strong>";
+            echo "<ul><li>A sua raiz quadrada é <strong>" . number_format($quadrada, 3, ",", ".") ."</strong></li>";
+            echo "<li>A sua raiz cúbica é <strong>" . number_format($cubica, 3, ",", ".") ."</strong></li></ul>";
         ?>
     </section>
 </body>
