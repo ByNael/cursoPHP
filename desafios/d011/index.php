@@ -16,21 +16,37 @@
     <main>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="preco">Preço do Produto (R$)</label>
-            <input type="number" name="preco" id="preco" value="<?=$preco?>">
-            <label for="percentual">Qual o percentual de reajuste?</label>
-            <input type="number" name="percentual" id="percentual" value="<?=$percentual?>"> 
+            <input type="number" name="preco" id="preco" min="0.10" step="0.01" value="<?=$preco?>">
+
+            <label for="percentual">Qual o percentual de reajuste? (<strong><span id="p">?</span>%</strong>)</label>
+            <input type="range" name="percentual" id="percentual" min="0" max="100" step="1" oninput="mudaValor()" value="<?=$percentual?>"> 
+
             <input type="submit" value="Reajustar">
+
         </form>
     </main>
 
     <section id="resultado">
-        <h2>Resultado do Reajuste</h2>
         <?php 
             $reajuste = (($preco * $percentual)/100);
             $reajuste += $preco;
 
+            /* antiga solução
             echo "O produto que custava $preco, com <strong>R$" . $percentual . "% de aumento</strong> vai passar a custar <strong>R$" . number_format($reajuste, 2, ",", ".") . "</strong> a partir de agora.";
+            */
         ?>
+        <h2>Resultado do Reajuste</h2>
+
+        <!--Uso de short tags-->
+        <p>O produto custava R$<?= number_format($preco, 2, ",", ".")?> com <strong><?= $percentual?> de aumento</strong> vai passsar a custar <strong>R$<?= number_format($reajuste, 2, ",", ".")?></strong> a partir de agora.</p>
     </section>
+
+    <script>
+        //Declarações automáticas
+        mudaValor()
+        function mudaValor() {
+            p.innerText = percentual.value
+        }
+    </script>
 </body>
 </html>
