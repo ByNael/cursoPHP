@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Desafio Calcular Segundos</title>
 </head>
 <body>
     <?php
         //calculadora de tempo que recebe em segundos pelo usuario e imprime na tela quantas semanas, dias, horas, minutos e segundos 
-        $segundos = $_GET['segundos'] ?? 0;
+        $segundos = $_REQUEST['segundos'] ?? 0;
     ?>
     <main>
         <h1>Calculadora de Tempo</h1>
@@ -22,19 +22,39 @@
     </main>
 
     <section id="resultado">
-        <h2>Resultado final</h2>
         <?php 
-            $semanas = $segundos/604800;
-            $dias = $segundos/86400;
-            $horas = $segundos/3600;
-            $minutos = $segundos/60;
+            $total_segundos = $segundos;
+            //semanas
+            $semanas = intdiv($total_segundos, 604800);
+            $total_segundos %= 604800;
+            //dias
+            $dias = intdiv($total_segundos, 86400);
+            $total_segundos %= 86400;
+            //horas
+            $horas = intdiv($total_segundos, 3600);
+            $total_segundos %= 3600;
+            //minutos
+            $minutos = intdiv($total_segundos, 60);
+            $total_segundos %= 60;
+            //segundos
+            $segundos = $total_segundos;
 
-            echo "Analisando o valor que você digitou, <strong>" . number_format($segundos, 3, ".", ".") . "</strong>, equivalem a um total de:<br>";
-            echo "$semanas semanas <br>";
-            echo "$dias dias <br>";
-            echo "$horas horas <br>";
-            echo "$segundos segundos<br>";
+            /*$semanas = intdiv($segundos, 604800); resposta antiga
+            *$dias = intdiv($segundos-(604800*$semanas), 86400);
+            *$horas = intdiv(($segundos-(604800*$semanas))-(86400*$dias), 3600);
+            *  $minutos = intdiv(((($segundos-(604800*$semanas))-(86400*$dias))-(3600*$horas)), 60);
+            */
         ?>
+
+        <h2>Resultado final</h2>
+        <p>Analisando o valor que você digitou, [<?=$segundos?>] segundos equivalem a um total de:</p>
+        <ul>
+            <li>[<?=$semanas?>] semanas</li>
+            <li>[<?=$dias?>] dias</li>
+            <li>[<?=$horas?>] horas</li>
+            <li>[<?=$minutos?>] minutos</li>
+            <li>[<?=$segundos?>] segundos</li>
+        </ul>
     </section>
 </body>
 </html>
