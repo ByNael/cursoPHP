@@ -1,6 +1,6 @@
 <?php 
-    /* Você foi contratado para desenvolve rum conversor de unidades, onde o usuário podera inserir valores em milímietros, centímetros, metro ou quilômetros e a aplicação deverá trazer a informação do valor correspondente nas demais unidades.
-    - o prograva deve solicitar ao usuario que informe qual a unidade base do valor a ser inserido
+    /* Você foi contratado para desenvolve um conversor de unidades, onde o usuário podera inserir valores em milímietros, centímetros, metros ou quilômetros e a aplicação deverá trazer a informação do valor correspondente nas demais unidades.
+    - o programa deve solicitar ao usuario que informe qual a unidade base do valor a ser inserido
     - o programa não deve permitir o avanço das etapas caso o usuário digite uma unidade inválida
     - o programa deve solicitar ao usuário o valor da unidade base
     - o programa não deve permitir o avanço das etapas caso o usuário digite um valor não numérico
