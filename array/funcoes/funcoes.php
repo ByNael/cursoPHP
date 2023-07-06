@@ -153,7 +153,7 @@
     echo '<hr>';
 
 
-    echo '<h2>Implode</h2>'; //transforma uma string em um array
+    echo '<h2>Explode</h2>'; //transforma uma string em um array
 
     echo "<pre>";
     print_r(explode(', ', 'bananas, laranja, goiaba, morango'));//primeiro parametro separados e segundo parametro a string desejada
