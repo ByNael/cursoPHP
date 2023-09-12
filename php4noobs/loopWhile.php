@@ -19,6 +19,7 @@ while($estouEmpregado) {
     if ($commitsZoados === 8){
         $estouEmpregado = false;
         echo "agora estou desempregado!";
+        break;
     }
 }
 
@@ -35,6 +36,7 @@ while($healthPoints > 0){
 
     if($healthPoints <= 0){
         echo "Seu personagem morreu" . PHP_EOL;
+        break;
     }
 
 }

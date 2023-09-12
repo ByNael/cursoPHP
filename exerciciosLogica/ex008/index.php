@@ -1,5 +1,6 @@
 <?php 
 
+    /*crie uma função que calcula imposto de acordo com o salario que a alimenta*/
     function calcularImposto($salario){
         if($salario <= 1903.98){
             $imposto = 'ISENTO';
