@@ -33,7 +33,7 @@ $users = [
     ],
 ];
 
-foreach ($users as $key => $value) {
+foreach ($users as $key => $value) { //a variavel $key recebe a chave ou id do valor no array
     echo $key . " " . $value['name'] . PHP_EOL;
 }
 
