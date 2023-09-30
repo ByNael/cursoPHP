@@ -21,7 +21,4 @@
     foreach($arrayNumerico as $sorteio){
         echo '- ' . $sorteio . PHP_EOL;
     }
-    
-
-
 ?>
